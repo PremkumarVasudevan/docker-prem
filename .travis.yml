@@ -1,0 +1,10 @@
+sudo: required
+services
+  - docker
+  
+before install:
+  - docker build -t premkumarv/docker-prem -f Dockerfile.dev .
+
+script:
+  - docker run premkumarv/docker-prem npm run test -- --coverage
+
