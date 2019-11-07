@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React TURK74
+          Learn React TURK74 nov7
         </a>
       </header>
     </div>
