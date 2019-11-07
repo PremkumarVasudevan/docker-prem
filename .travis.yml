@@ -8,3 +8,15 @@ before_install:
 script:
   - docker run -e CI=true premkumarv/docker-prem npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-prem"
+  env: "DockerPrem-env"
+  bucket_name: "elasticbeanstalk-us-east-1-652249492228"
+  bucket_path: "docker-prem"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
