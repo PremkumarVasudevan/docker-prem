@@ -3,8 +3,8 @@ services:
   - docker
   
 before install:
-  - docker build -t myimage -f Dockerfile.dev .
+  - docker build -t PremkumarVasudevan/docker-prem -f Dockerfile.dev .
 
 script:
-  - docker run myimage npm run test -- --coverage
+  - docker run PremkumarVasudevan/docker-prem npm run test -- --coverage
 
